@@ -1,16 +1,7 @@
-const hValue = document.getElementById("h-val");
-let hText = document.getElementById("h-text");
-const hBtn = document.getElementById("h-btn");
+let cars = ["benz", "audi", "porsche"];
 
-let count = 0;
-if (count <= 0) {
-  hText.innerText = "count is less than 0";
-} else if ((count = 5)) {
-  hText.innerText = "count is 0";
-} else {
-  hText.innerText = "count is greater than 0";
+function carsData() {
+  let randomCar = Math.floor(Math.random() * 3);
+  return cars[randomCar];
 }
-hBtn.addEventListener("click", () => {
-  count++;
-  hValue.innerText = Math.floor(Math.random() * 9);
-});
+console.log(carsData());
