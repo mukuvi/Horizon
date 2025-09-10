@@ -3,7 +3,6 @@ let btnVal = document.querySelector("#h-btn");
 let storageVal = document.querySelector("#h-text");
 let storangeData = [];
 
-console.log(isName);
 btnVal.addEventListener("click", () => {
   storangeData.push(inputVal.value);
   storageVal.textContent = storangeData.join(", ");
