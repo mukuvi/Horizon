@@ -20,6 +20,7 @@ let storangeData = [];
 
 localStorage.setItem("name", "james mukuvi ngandu");
 let isName = localStorage.getItem("name");
+
 console.log(isName);
 btnVal.addEventListener("click", () => {
   storangeData.push(inputVal.value);
