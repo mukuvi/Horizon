@@ -18,9 +18,6 @@ let btnVal = document.querySelector("#h-btn");
 let storageVal = document.querySelector("#h-text");
 let storangeData = [];
 
-localStorage.setItem("name", "james mukuvi ngandu");
-let isName = localStorage.getItem("name");
-
 console.log(isName);
 btnVal.addEventListener("click", () => {
   storangeData.push(inputVal.value);
