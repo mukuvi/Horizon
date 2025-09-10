@@ -23,6 +23,6 @@ btnVal.addEventListener("click", () => {
   storangeData.push(inputVal.value);
   storageVal.textContent = storangeData.join(", ");
   inputVal.value = "";
-  localStorage.setItem("storangeData", "storangeVal");
+  localStorage.setItem("storangeData", JSON.stringify(storangeData));
   localStorage.getItem("storangeData");
 });
