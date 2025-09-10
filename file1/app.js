@@ -11,4 +11,18 @@ function logCars(arr) {
     console.log(arr[i]);
   }
 }
-logCars(cars);
+// logCars(cars);
+
+let inputVal = document.querySelector("#h-val");
+let btnVal = document.querySelector("#h-btn");
+let storageVal = document.querySelector("#h-text");
+let storangeData = [];
+
+localStorage.setItem("name", "james mukuvi ngandu");
+let isName = localStorage.getItem("name");
+console.log(isName);
+btnVal.addEventListener("click", () => {
+  storangeData.push(inputVal.value);
+  storageVal.textContent = storangeData.join(", ");
+  inputVal.value = "";
+});
