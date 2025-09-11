@@ -27,20 +27,3 @@ let order = (time, work) => {
 order(2000, () => console.log(`${stocks.fruits[0]} was selected`)).catch(
   (err) => console.log(err)
 );
-
-let isProductCheap = false;
-
-let product = (time, price) => {
-  return new Promise((res, rej) => {
-    if (isProductCheap) {
-      setTimeout(() => {
-        res(price);
-      }, time);
-    } else {
-      rej("The product is expensive");
-    }
-  });
-};
-product(2000, () => console.log("The product is cheap")).catch((error) =>
-  console.log(error)
-);
