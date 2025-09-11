@@ -27,3 +27,11 @@ let order = (time, work) => {
 order(2000, () => console.log(`${stocks.fruits[0]} was selected`)).catch(
   (err) => console.log(err)
 );
+
+async function product() {
+  try {
+  } catch {
+  } finally {
+    console.log("just go home");
+  }
+}
