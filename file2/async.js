@@ -11,7 +11,7 @@ let stocks = {
   toppings: ["chocolates", "peanuts"],
   drinks: ["water", "milk"],
 };
-let isopen = true;
+let isopen = false;
 
 let order = (time, work) => {
   return new Promise((resolve, reject) => {
@@ -24,4 +24,4 @@ let order = (time, work) => {
     }
   });
 };
-order(2000, () => console.log(`${stocks.fruits[0]}`));
+order(2000, () => console.log(`${stocks.fruits[0]} was selected`));
