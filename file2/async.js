@@ -20,8 +20,10 @@ let order = (time, work) => {
         resolve(work());
       }, time);
     } else {
-      reject(console.log("Our shop is closed"));
+      reject("Our shop is closed");
     }
   });
 };
-order(2000, () => console.log(`${stocks.fruits[0]} was selected`));
+order(2000, () => console.log(`${stocks.fruits[0]} was selected`)).catch(
+  (err) => console.log(err)
+);
