@@ -5,7 +5,7 @@ let storangeData = [];
 
 btnVal.addEventListener("click", () => {
   storangeData.push(inputVal.value);
-  storageVal.textContent = storangeData.join(", ");
+  storageVal.textContent = storangeData;
   inputVal.value = "";
   // localStorage.setItem("storangeData", JSON.stringify(storangeData));
   // localStorage.getItem("storangeData");
