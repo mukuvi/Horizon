@@ -6,14 +6,13 @@
 //   console.log("call me James Mukuvi Ngandu");
 // }, 2000);
 
+let stocks = {
+  fruits: ["mango", "banana", "pineapple", "orange"],
+  toppings: ["chocolates", "peanuts"],
+  drinks: ["water", "milk"],
+};
 let isopen = true;
 
-// let open = () => {
-//   isopen
-//     ? console.log("switch on the lights")
-//     : console.log("switch off the lights");
-// };
-// open();
 let order = (time, work) => {
   return new Promise((resolve, reject) => {
     if (isopen) {
@@ -25,4 +24,4 @@ let order = (time, work) => {
     }
   });
 };
-order();
+order(2000, () => console.log(`${stocks.fruits[0]}`));
