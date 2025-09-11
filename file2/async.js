@@ -14,12 +14,15 @@ let isopen = true;
 //     : console.log("switch off the lights");
 // };
 // open();
-let open = (time, work) => {
+let order = (time, work) => {
   return new Promise((resolve, reject) => {
     if (isopen) {
-      resolve(work());
+      setTimeout(() => {
+        resolve(work());
+      }, time);
     } else {
       reject(console.log("Our shop is closed"));
     }
   });
 };
+order();
