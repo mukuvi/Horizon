@@ -6,7 +6,7 @@
 //   console.log("call me James Mukuvi Ngandu");
 // }, 2000);
 
-let isopen = false;
+let isopen = true;
 
 // let open = () => {
 //   isopen
@@ -16,6 +16,10 @@ let isopen = false;
 // open();
 let open = (time, work) => {
   return new Promise((resolve, reject) => {
-    isopen ? resolve(work()) : reject(console.log("our shop is closed"));
+    if (isopen) {
+      resolve(work());
+    } else {
+      reject(console.log("Our shop is closed"));
+    }
   });
 };
