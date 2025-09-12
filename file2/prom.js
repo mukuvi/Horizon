@@ -5,6 +5,7 @@ let a = new Promise((resolve, reject) => {
   } else {
     reject("Failed");
   }
-})
-  .then((message) => console.log(`The display shows ${message}`))
-  .catch((message) => console.log(`The display shows ${message}`));
+});
+a.then((message) => console.log(`The display shows ${message}`)).catch(
+  (message) => console.log(`The display shows ${message}`)
+);
