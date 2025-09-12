@@ -28,16 +28,20 @@
 //   (err) => console.log(err)
 // );
 
-let grade = 3;
-async function product() {
-  try {
-    if (grade > 70) {
-      console.log("Proceed to the next class");
-    }
-  } catch (error) {
-    console.log("you cant proceed to the next class", error);
-  } finally {
-    console.log("Grading done!");
-  }
-}
-product();
+// let grade = 3;
+// async function product() {
+//   try {
+//     if (grade > 70) {
+//       console.log("Proceed to the next class");
+//     }
+//   } catch (error) {
+//     console.log("you cant proceed to the next class", error);
+//   } finally {
+//     console.log("Grading done!");
+//   }
+// }
+// product();
+
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+  .then((response) => response.json())
+  .then((json) => console.log(json));
