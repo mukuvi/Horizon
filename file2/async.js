@@ -3,8 +3,8 @@ async function userData() {
     let response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
 
     if (response.ok) {
-      let data = await response.json(); // Parse JSON
-      console.log("Data received:", data); // Display data
+      let data = await response.json();
+      console.log("Data received:", data);
     } else {
       console.error("HTTP Error:", response.status, response.statusText);
     }
@@ -13,5 +13,4 @@ async function userData() {
   }
 }
 
-// Call the function
 userData();
