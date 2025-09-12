@@ -1,5 +1,5 @@
 let a = new Promise((resolve, reject) => {
-  let b = 1 + 1;
+  let b = 6 + 1;
   if (b === 2) {
     resolve("success");
   } else {
@@ -7,4 +7,4 @@ let a = new Promise((resolve, reject) => {
   }
 })
   .then(() => console.log("hello"))
-  .then((error) => console.log(error));
+  .catch((error) => console.log(error));
