@@ -1,9 +1,12 @@
 import http from "node:http";
 import { getDataFromDB } from "../db.js";
+import { getDataFromDB } from "./db.js";
 
 const PORT = 8000;
 
 const server = http.createServer((req, res) => {
+  const destinations = getDataFromDB();
+
   if (req.url === "/api" && req.method === "GET") {
     res.end("This is from the server");
   }
