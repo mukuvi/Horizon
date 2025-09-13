@@ -1,8 +1,9 @@
 import http from "node:http";
 const PORT = 8000;
 const server = http.createServer((req, res) => {
-  res.write("Hello from the server \n");
-  res.end();
+  if (req.method === "GET") {
+    res.end("Hello from the server");
+  }
 });
 
 server.listen(PORT, () => console.log(`server running on port: ${PORT}`));
