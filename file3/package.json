@@ -4,7 +4,6 @@
   "description": "new horizon",
   "license": "ISC",
   "author": "james mukuvi",
-  "type": "commonjs",
   "main": "data.js",
   "type": "module",
   "scripts": {
