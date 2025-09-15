@@ -16,13 +16,10 @@ const server = http.createServer(async (req, res) => {
     });
     sendJSONResponse(res, 200, filteredData);
   } else {
-    sendJSONResponse(
-      res,
-      404({
-        error: "not found",
-        message: "The requested route does not exist",
-      })
-    );
+    sendJSONResponse(res, 404, {
+      error: "not found",
+      message: "The requested route does not exist",
+    });
   }
 });
 
