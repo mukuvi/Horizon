@@ -1,1 +1,5 @@
-http://localhost:8000/
+### Get all destinations
+GET http://localhost:8000/api
+
+### Filter by continent
+GET http://localhost:8000/api/continent/Asia
