@@ -2,4 +2,5 @@
 GET http://localhost:8000/api
 
 ### Filter by continent
-GET http://localhost:8000/api/continent/Asia
+GET http://localhost:8000/api/continent/Africa
+
