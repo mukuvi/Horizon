@@ -1,5 +1,4 @@
 import http from "node:http";
-
 import { getDataFromDB } from "./database/db.js";
 
 const PORT = 8000;
@@ -11,7 +10,7 @@ const server = http.createServer(async (req, res) => {
     res.setHeader("Content-Type", "application/json");
     res.statusCode = 200;
     res.end(JSON.stringify(destinations));
-  } else if (req.url.startsWith("/api/continent/") && req.method === "GET") {
+  } else if (req.url.startsWith("/api/continent") && req.method === "GET") {
     const continent = req.url.split("/").pop();
     const filteredData = destinations.filter((destination) => {
       return destination.continent.toLowerCase() === continent.toLowerCase();
@@ -31,4 +30,4 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, () => console.log(`server running on port: ${PORT}`));
+server.listen(PORT, () => console.log(`Connected on port: ${PORT}`));

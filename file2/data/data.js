@@ -26,14 +26,14 @@ export const data = [
     details: [
       {
         fun_fact:
-        "This fiery crater has been burning since 1971 after a drilling accident.",
+          "This fiery crater has been burning since 1971 after a drilling accident.",
       },
       {
         description:
-        "A continuously burning gas crater in the Karakum Desert, captivating adventurous travelers with its otherworldly glow.",
+          "A continuously burning gas crater in the Karakum Desert, captivating adventurous travelers with its otherworldly glow.",
       },
     ],
-    uuid: "550e8400-e29b-41d4-a716-446655440002"
+    uuid: "550e8400-e29b-41d4-a716-446655440002",
   },
   {
     name: "Underwater Waterfall",
@@ -44,14 +44,14 @@ export const data = [
     details: [
       {
         fun_fact:
-        "This optical illusion is caused by sand and silt deposits under the water.",
+          "This optical illusion is caused by sand and silt deposits under the water.",
       },
       {
         description:
-        "An incredible illusion off the island’s coast, appearing as if water cascades into a vast underwater abyss.",
+          "An incredible illusion off the island’s coast, appearing as if water cascades into a vast underwater abyss.",
       },
     ],
-    uuid: "550e8400-e29b-41d4-a716-446655440003"
+    uuid: "550e8400-e29b-41d4-a716-446655440003",
   },
   {
     name: "Giant's Causeway",
@@ -62,14 +62,14 @@ export const data = [
     details: [
       {
         fun_fact:
-        "The hexagonal columns are formed by ancient volcanic activity.",
+          "The hexagonal columns are formed by ancient volcanic activity.",
       },
       {
         description:
-        "A UNESCO World Heritage Site featuring striking hexagonal basalt columns along the scenic Northern Irish coastline.",
+          "A UNESCO World Heritage Site featuring striking hexagonal basalt columns along the scenic Northern Irish coastline.",
       },
     ],
-    uuid: "550e8400-e29b-41d4-a716-446655440004"
+    uuid: "550e8400-e29b-41d4-a716-446655440004",
   },
   {
     name: "Fly Geyser",
@@ -77,7 +77,6 @@ export const data = [
     country: "USA",
     continent: "North America",
     is_open_to_public: false,
-    uuid: "550e8400-e29b-41d4-a716-446655440005",
     details: [
       {
         fun_fact:
@@ -88,6 +87,7 @@ export const data = [
           "A colorful, continuously spouting geothermal formation with vibrant mineral deposits on a private Nevada ranch.",
       },
     ],
+    uuid: "550e8400-e29b-41d4-a716-446655440005",
   },
   {
     name: "Kjeragbolten",
@@ -98,14 +98,14 @@ export const data = [
     details: [
       {
         fun_fact:
-        "A giant boulder wedged in a mountain crevice with a 984-meter drop beneath it.",
+          "A giant boulder wedged in a mountain crevice with a 984-meter drop beneath it.",
       },
       {
         description:
-        "A legendary hiking destination where brave visitors can stand on a rock suspended between two cliffs.",
+          "A legendary hiking destination where brave visitors can stand on a rock suspended between two cliffs.",
       },
     ],
-    uuid: "550e8400-e29b-41d4-a716-446655440006"
+    uuid: "550e8400-e29b-41d4-a716-446655440006",
   },
   {
     name: "The Wave",
@@ -119,10 +119,10 @@ export const data = [
       },
       {
         description:
-        "A sought-after hiking spot in the Coyote Buttes area, prized for its surreal, undulating sandstone formations.",
+          "A sought-after hiking spot in the Coyote Buttes area, prized for its surreal, undulating sandstone formations.",
       },
     ],
-    uuid: "550e8400-e29b-41d4-a716-446655440007"
+    uuid: "550e8400-e29b-41d4-a716-446655440007",
   },
   {
     name: "Socotra Island",
@@ -136,10 +136,10 @@ export const data = [
       },
       {
         description:
-        "A remote and biologically diverse island, known for its unique flora and striking desert landscapes.",
+          "A remote and biologically diverse island, known for its unique flora and striking desert landscapes.",
       },
     ],
-    uuid: "550e8400-e29b-41d4-a716-446655440008"
+    uuid: "550e8400-e29b-41d4-a716-446655440008",
   },
   {
     name: "Pamukkale",
@@ -150,14 +150,14 @@ export const data = [
     details: [
       {
         fun_fact:
-        "The white terraces are made of travertine, a mineral deposited by thermal springs.",
+          "The white terraces are made of travertine, a mineral deposited by thermal springs.",
       },
       {
         description:
-        "A famed natural site boasting tiered, cotton-white terraces and warm mineral-rich waters for bathing.",
+          "A famed natural site boasting tiered, cotton-white terraces and warm mineral-rich waters for bathing.",
       },
     ],
-    uuid: "550e8400-e29b-41d4-a716-446655440009"
+    uuid: "550e8400-e29b-41d4-a716-446655440009",
   },
   {
     name: "Cano Cristales",
@@ -168,11 +168,11 @@ export const data = [
     details: [
       {
         fun_fact:
-        "Known as the 'Liquid Rainbow,' it glows in five colors during certain seasons.",
+          "Known as the 'Liquid Rainbow,' it glows in five colors during certain seasons.",
       },
       {
         description:
-        "A mesmerizing river whose aquatic plants and algae create a kaleidoscope of vibrant hues.",
+          "A mesmerizing river whose aquatic plants and algae create a kaleidoscope of vibrant hues.",
       },
     ],
     uuid: "550e8400-e29b-41d4-a716-446655440010",
@@ -186,11 +186,11 @@ export const data = [
     details: [
       {
         fun_fact:
-        "The beach gets its vibrant red color from the plant Suaeda salsa.",
+          "The beach gets its vibrant red color from the plant Suaeda salsa.",
       },
       {
         description:
-        "A striking coastal wetland carpeted by red seaweed, popular for its unique color and birdlife.",
+          "A striking coastal wetland carpeted by red seaweed, popular for its unique color and birdlife.",
       },
     ],
     uuid: "550e8400-e29b-41d4-a716-446655440011",
@@ -207,7 +207,7 @@ export const data = [
       },
       {
         description:
-        "A thrilling dip right on the brink of Victoria Falls, offering daredevils a breathtaking view of the drop.",
+          "A thrilling dip right on the brink of Victoria Falls, offering daredevils a breathtaking view of the drop.",
       },
     ],
     uuid: "550e8400-e29b-41d4-a716-446655440012",
@@ -221,11 +221,11 @@ export const data = [
     details: [
       {
         fun_fact:
-        "The caves are formed under a glacier, creating glowing blue tunnels.",
+          "The caves are formed under a glacier, creating glowing blue tunnels.",
       },
       {
         description:
-        "A hidden world of otherworldly, icy blue chambers inside the Mendenhall Glacier, accessible only by adventurous treks.",
+          "A hidden world of otherworldly, icy blue chambers inside the Mendenhall Glacier, accessible only by adventurous treks.",
       },
     ],
     uuid: "550e8400-e29b-41d4-a716-446655440013",
@@ -239,11 +239,11 @@ export const data = [
     details: [
       {
         fun_fact:
-        "These spherical boulders were formed from calcite over millions of years.",
+          "These spherical boulders were formed from calcite over millions of years.",
       },
       {
         description:
-        "Mysterious, perfectly round boulders scattered along a picturesque coastline, steeped in Māori legend.",
+          "Mysterious, perfectly round boulders scattered along a picturesque coastline, steeped in Māori legend.",
       },
     ],
     uuid: "550e8400-e29b-41d4-a716-446655440014",
@@ -260,7 +260,7 @@ export const data = [
       },
       {
         description:
-        "A perplexing stretch of road in the Himalayas where gravity seemingly takes a puzzling turn.",
+          "A perplexing stretch of road in the Himalayas where gravity seemingly takes a puzzling turn.",
       },
     ],
     uuid: "550e8400-e29b-41d4-a716-446655440015",
@@ -277,7 +277,7 @@ export const data = [
       },
       {
         description:
-        "An astonishing cavern filled with massive, glimmering selenite crystals hidden deep beneath the Earth’s surface.",
+          "An astonishing cavern filled with massive, glimmering selenite crystals hidden deep beneath the Earth’s surface.",
       },
     ],
     uuid: "550e8400-e29b-41d4-a716-446655440016",
@@ -291,11 +291,11 @@ export const data = [
     details: [
       {
         fun_fact:
-        "Home to one of the most venomous snakes in the world, the golden lancehead.",
+          "Home to one of the most venomous snakes in the world, the golden lancehead.",
       },
       {
         description:
-        "A secluded and highly restricted island swarming with venomous snakes, enforcing a strict no-visitor policy.",
+          "A secluded and highly restricted island swarming with venomous snakes, enforcing a strict no-visitor policy.",
       },
     ],
     uuid: "550e8400-e29b-41d4-a716-446655440017",
@@ -309,11 +309,11 @@ export const data = [
     details: [
       {
         fun_fact:
-        "Inhabited by an uncontacted tribe, it is completely off-limits to visitors.",
+          "Inhabited by an uncontacted tribe, it is completely off-limits to visitors.",
       },
       {
         description:
-        "A remote island in the Bay of Bengal, home to an isolated tribe who protect their way of life fiercely.",
+          "A remote island in the Bay of Bengal, home to an isolated tribe who protect their way of life fiercely.",
       },
     ],
     uuid: "550e8400-e29b-41d4-a716-446655440018",
@@ -327,13 +327,13 @@ export const data = [
     details: [
       {
         fun_fact:
-        "A former volcanic prison, it is no longer operational but remains restricted.",
+          "A former volcanic prison, it is no longer operational but remains restricted.",
       },
       {
         description:
-        "A historical penal facility once perched on an active volcano, now off-limits and shrouded in intrigue.",
+          "A historical penal facility once perched on an active volcano, now off-limits and shrouded in intrigue.",
       },
     ],
     uuid: "550e8400-e29b-41d4-a716-446655440019",
-  }
-]
+  },
+];
