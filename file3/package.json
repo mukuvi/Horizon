@@ -4,7 +4,7 @@
   "description": "a dataset of the world’s most promising startups",
   "license": "ISC",
   "author": "James Mukuvi",
-  "type": "commonjs",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
