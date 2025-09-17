@@ -4,5 +4,6 @@ GET http://localhost:8000/api
 ### Test 2: API call with query parameters
 GET http://localhost:8000/api?job=movie_star&isRich=true
 
-### Test 2: API call with query parameters
-GET http://localhost:8000/api?industry=Renewable Energy
+###
+
+GET http://localhost:8000/api?continent=africa

@@ -1,18 +1,22 @@
 import express from "express";
 import { startups } from "./data/data.js";
+import { start } from "repl";
 const PORT = 8000;
 
 const app = express();
 
 app.get("/api", (req, res) => {
   let filteredData = startups;
+  const { country, continent, city } = req.query;
 
-  const { industry, country, continent, is_seeking_funding, has_mvp } =
-    req.query;
-
-  if (industry) {
+  if (country) {
     filteredData = filteredData.filter(
-      (startup) => startup.industry.toLowerCase() === industry.toLowerCase()
+      (startup) => startup.country.toLowerCase() === country.toLowerCase()
+    );
+  }
+  if (continent) {
+    filteredData = filteredData.filter(
+      (startup) => startup.continent.toLowerCase() === continent.toLowerCase()
     );
   }
 
