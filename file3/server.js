@@ -31,4 +31,5 @@ app.get("/api/:field/:term", (req, res) => {
 
   res.json(filteredData);
 });
+
 app.listen(PORT, () => console.log(`server connected on port ${PORT}`));
