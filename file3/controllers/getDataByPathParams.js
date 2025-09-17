@@ -1,3 +1,4 @@
+import { startups } from "../data/data";
 export const getDataByPathParams = (req, res) => {
   const { field, term } = req.params;
 
