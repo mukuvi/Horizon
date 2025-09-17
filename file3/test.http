@@ -12,3 +12,6 @@ GET http://localhost:8000/api/country/Mexico
 ###
 GET http://localhost:8888/api?country=germany
 
+###
+GET http://localhost:8888/api/industry/Renewable Energy
+
