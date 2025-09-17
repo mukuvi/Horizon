@@ -1,6 +1,7 @@
 import express from "express";
 import { startups } from "./data/data.js";
 import { start } from "repl";
+
 const PORT = 8000;
 
 const app = express();
@@ -30,6 +31,14 @@ app.get("/api/:field/:term", (req, res) => {
   );
 
   res.json(filteredData);
+});
+
+app.get("/api/:support/:team", (req, res) => {
+  const { support, team } = req.params;
+
+  startups.filter(
+    (startt) => startt[support.toLowerCase() === team.toLowerCase()
+  );res.json(filteredData);
 });
 
 app.listen(PORT, () => console.log(`server connected on port ${PORT}`));
