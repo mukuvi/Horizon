@@ -33,12 +33,4 @@ app.get("/api/:field/:term", (req, res) => {
   res.json(filteredData);
 });
 
-app.get("/api/:support/:team", (req, res) => {
-  const { support, team } = req.params;
-
-  startups.filter(
-    (startt) => startt[support.toLowerCase() === team.toLowerCase()
-  );res.json(filteredData);
-});
-
 app.listen(PORT, () => console.log(`server connected on port ${PORT}`));
