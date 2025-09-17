@@ -18,13 +18,7 @@ app.get("/api", (req, res) => {
     filteredData = filteredData.filter(
       (startup) => startup.continent.toLowerCase() === continent.toLowerCase()
     );
-  } /*
-Get all startups in a given country via api/country/<country name>
-Get all startups in a given continent via api/continent/<continent name>
-Get all startups in a given industry via api/industry/<industry name>
-These should work:
-  api/country/india   api/continent/europe   api/industry/ai
-*/
+  }
   res.json(filteredData);
 });
 
