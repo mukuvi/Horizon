@@ -5,5 +5,7 @@ GET http://localhost:8000/api
 GET http://localhost:8000/api?job=movie_star&isRich=true
 
 ###
-
 GET http://localhost:8000/api?continent=africa
+###
+GET http://localhost:8000/api?continent=asia&country=india
+
