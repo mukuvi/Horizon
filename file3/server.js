@@ -1,14 +1,6 @@
-import http from "node:http";
-const PORT = 8000;
-let dirName = import.meta.dirname;
-console.log(dirName);
+import path from "node:path";
+import fs from "node:fs/promises";
 
-let server = http.createServer((req, res) => {
-  if (req.url === "/api") {
-    req.end("My server is correctly running");
-  } else {
-    res.end("Server error");
-  }
-});
-
-server.listen(PORT, console.log(`sever running on port ${PORT}`));
+export function serveStatic(baseDir) {
+  const filePath = path.join(baseDir, "public", "index.html");
+}
