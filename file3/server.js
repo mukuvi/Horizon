@@ -1,5 +1,7 @@
 import http from "node:http";
 const PORT = 8000;
+let dirName = import.meta.dirname;
+console.log(dirName);
 
 let server = http.createServer((req, res) => {
   if (req.url === "/api") {
