@@ -9,3 +9,6 @@ GET http://localhost:8000/api?continent=africa
 
 ### 
 GET http://localhost:8000/api/country/Mexico
+###
+GET http://localhost:8888/api?country=germany
+
