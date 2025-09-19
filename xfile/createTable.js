@@ -9,15 +9,20 @@ async function createTable() {
   });
 
   await db.exec(`
-  CREATE TABLE IF NOT EXISTS abductions (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    location TEXT NOT NULL,
-    details TEXT NOT NULL
-  )
-  `);
+      CREATE TABLE IF NOT EXISTS products (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            title TEXT NOT NULL,  
+            artist TEXT NOT NULL, 
+            price REAL NOT NULL,
+            image TEXT NOT NULL, 
+            year INTEGER,
+            genre TEXT,
+            stock INTEGER
+            )
+      `);
 
   await db.close();
-  console.log("Table abductions created");
+  console.log("Table created");
 }
 
 createTable();
