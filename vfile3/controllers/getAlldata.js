@@ -2,7 +2,7 @@ import { counties } from "../data/data.js";
 
 export const getAllData = (req, res) => {
   let filteredData = counties;
-  let { name, province, capital } = req.query;
+  const { name, province, capital } = req.query;
   if (name) {
     filteredData = filteredData.filter(
       (county) => county.name.toLowerCase() === name.toLowerCase()
@@ -18,4 +18,5 @@ export const getAllData = (req, res) => {
       (county) => county.capital.toLowerCase() === capital.toLowerCase()
     );
   }
+  res.json(filteredData);
 };
