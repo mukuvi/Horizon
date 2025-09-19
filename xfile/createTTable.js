@@ -25,14 +25,6 @@ async function createAndPopulateTable() {
       ('Makeup', 'Alice Johnson', 'Stylist C')
   `);
 
-  console.log("Sample data inserted.");
-
-  const rows = await db.all("SELECT * FROM services");
-  console.log("Services Table Contents:");
-  rows.forEach((row) => {
-    console.log(`${row.id}: ${row.title} for ${row.name} by ${row.artist}`);
-  });
-
   await db.close();
 }
 
