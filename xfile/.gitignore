@@ -1,1 +1,4 @@
-node_modules
+*.db
+*.log
+.DS_Store
+node_modules/
