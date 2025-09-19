@@ -1,6 +1,6 @@
 import express from "express";
-import { getAllData } from "../controllers/getAlldata";
-import { getDataByParams } from "../controllers/getDataByParams";
+import { getAllData } from "../controllers/getAlldata.js";
+import { getDataByParams } from "../controllers/getDataByParams.js";
 
 export const apiRouter = express.Router();
 
