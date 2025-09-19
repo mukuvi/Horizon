@@ -1,4 +1,4 @@
-const counties = [
+let counties = [
   {
     id: 1,
     name: "Mombasa",
