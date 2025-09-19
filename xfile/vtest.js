@@ -1,30 +1,34 @@
 import sqlite3 from "sqlite3";
 import { open } from "sqlite";
 import path from "node:path";
-import { Console } from "node:console";
+import { abductionsData } from "./abductionsData.js";
 
-async function vtest() {
+async function seedTable() {
   const db = await open({
-    filename: path.join("vtest.db"),
+    filename: path.join("database.db"),
     driver: sqlite3.Database,
   });
-  await db.exec(`
-    CREATE TABLE IF NOT EXISTS vphones(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    model TEXT NOT NULL,
-    year,
-    price REAL 
-    )`);
-  await db.run(`
-        INSERT INTO vphones(name,model,year,price)
-        VALUES
-        ("iphone","17pro",2025,150000),
-        ("samsung","s25",2025,140000),
-        ("oppo","reno 13",2024,65000),
-        ("google pixel","p8",2022,10000)
-        `);
-  await db.close();
-  console.log("Table successfuly created");
+
+  try {
+    await db.exec("BEGIN TRANSACTION");
+
+    for (const { location, details } of abductionsData) {
+      await db.run(
+        `INSERT INTO abductions (location, details)
+        VALUES (?, ?)`,
+        [location, details]
+      );
+    }
+
+    await db.exec("COMMIT");
+    console.log("All records inserted");
+  } catch (err) {
+    await db.exec("ROLLBACK");
+    console.log("Error inserting data", err.message);
+  } finally {
+    await db.close();
+    console.log("connection closed");
+  }
 }
-vtest();
+
+seedTable();
