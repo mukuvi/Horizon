@@ -1,4 +1,4 @@
-import counties from "../data/data.js";
+import { counties } from "../data/data.js";
 
 export const getAllData = (req, res) => {
   let filteredData = counties;

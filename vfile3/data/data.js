@@ -1,4 +1,4 @@
-let counties = [
+export const counties = [
   {
     id: 1,
     name: "Mombasa",
@@ -740,5 +740,3 @@ let counties = [
     tribes: ["Kikuyu", "Luo", "Luhya", "Kamba", "Other migrants"],
   },
 ];
-
-export default counties;
