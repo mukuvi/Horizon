@@ -1,5 +1,6 @@
 import counties from "../data/data";
-app.get("/api", (req, res) => {
+
+export const getAllData = (req, res) => {
   let filteredData = counties;
   let { name, province, capital } = req.query;
   if (name) {
@@ -17,6 +18,4 @@ app.get("/api", (req, res) => {
       (county) => county.capital.toLowerCase() === capital.toLowerCase()
     );
   }
-
-  res.json(filteredData);
-});
+};
