@@ -13,11 +13,11 @@ async function createTable() {
         name TEXT NOT NULL,
         price INTEGER )`);
   await db.run(`
-            INSERT INTO fruits(id,name,price)
+            INSERT INTO fruits(name,price)
             VALUES
-            ("mango","20"),
-            ("apple","30"),
-            ("orange","15")`);
+            ("mango",20),
+            ("apple",30),
+            ("orange",15)`);
   await db.close();
   console.log("Table successfully created");
 }
