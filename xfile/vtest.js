@@ -5,11 +5,20 @@ import { abductionsData } from "./abductionsData.js";
 
 async function seedTable() {
   const db = await open({
-    filename: path.join("database.db"),
+    filename: path.join("vtestbase.db"),
     driver: sqlite3.Database,
   });
 
   try {
+    // Create the 'abductions' table if it doesn't exist
+    await db.exec(`
+      CREATE TABLE IF NOT EXISTS abductions (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        location TEXT NOT NULL,
+        details TEXT NOT NULL
+      );
+    `);
+
     await db.exec("BEGIN TRANSACTION");
 
     for (const { location, details } of abductionsData) {
@@ -27,7 +36,7 @@ async function seedTable() {
     console.log("Error inserting data", err.message);
   } finally {
     await db.close();
-    console.log("connection closed");
+    console.log("Connection closed");
   }
 }
 
