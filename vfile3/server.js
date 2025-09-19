@@ -25,5 +25,12 @@ app.get("/api", (req, res) => {
 
   res.json(filteredData);
 });
+app.get("/api/:field/:term", (req, res) => {
+  const { field, term } = req.params;
+  let someData = counties.filter(
+    (county) => county[field].toLowerCase() === term.toLowerCase()
+  );
+  res.json(someData);
+});
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
