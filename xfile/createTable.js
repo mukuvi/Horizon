@@ -1,7 +1,7 @@
 import sqlite3 from "sqlite3";
 import { open } from "sqlite";
 import path from "node:path";
-import { abductionsData } from "./abductionsData";
+import { abductionsData } from "./abductionsData.js";
 
 async function seedTable() {
   const db = await open({
@@ -11,10 +11,13 @@ async function seedTable() {
   await db.exec("BEGIN TRANSACTION");
   try {
     for (const { location, details } of abductionsData) {
-      await db.run(`
+      await db.run(
+        `
         INSERT INTO abductions(location,details)
         VALUES(?,?)
-        `)[(location, details)];
+        `,
+        [location, details]
+      );
     }
     await db.exec("COMMIT");
     console.log("All records inserted");
