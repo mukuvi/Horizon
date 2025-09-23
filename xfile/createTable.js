@@ -8,8 +8,9 @@ async function seedTable() {
     filename: path.join("database.db"),
     driver: sqlite3.Database,
   });
-  await db.exec("BEGIN TRANSACTION");
+
   try {
+    await db.exec("BEGIN TRANSACTION");
     for (const { location, details } of abductionsData) {
       await db.run(
         `
