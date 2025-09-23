@@ -17,9 +17,9 @@ async function createTable() {
         `);
   await db.run(`
             INSERT INTO cafesynca(name,country,price)
-            VALLUES
+            VALUES
             ("arabica","ethiopia",760),
-            ("robuster,"kenya",500),
+            ("robuster","kenya",500),
             ("colombian","colombia"990)
             `);
   await db.close();
