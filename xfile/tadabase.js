@@ -20,7 +20,7 @@ async function createTable() {
             VALUES
             ("arabica","ethiopia",760),
             ("robuster","kenya",500),
-            ("colombian","colombia"990)
+            ("colombian","colombia",990)
             `);
   await db.close();
   console.log("Database created");
