@@ -10,6 +10,15 @@ async function seedTable() {
   });
 
   try {
+    await db.exec(`
+        CREATE TABLE IF NOT EXISTS abductions(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        location TEXT NOT NULL,
+        details TEXT NOT NULL
+        
+        )
+        `);
+    console.log("Table created");
     await db.exec("BEGIN TRANSACTION");
     for (const { location, details } of abductionsData) {
       await db.run(
