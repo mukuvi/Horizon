@@ -1,15 +1,18 @@
 import express from "express";
-import validator from "validator";
 
 const app = express();
+const PORT = process.env.PORT || 8000;
 
-const newUser = {
-  fullName: "Marcus Aurelius",
-  username: "Marcus1",
-  email: "marcus@holy-roman-empire,org",
-  password: "Gladiators!",
-};
+app.use(express.json());
+app.use(express.static("public"));
+app.get("/api", (req, res) => {
+  res.send("welcome user");
+});
+app.post("/api/user", (req, res) => {
+  const { name, email } = req.body;
+  res.json({
+    message: `User name ${name} and email ${email} created successfuly`,
+  });
+});
 
-console.log(validator.isEmail(newUser.email));
-
-app.listen(8000, () => console.log("listening 8000"));
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
