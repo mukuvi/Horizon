@@ -5,13 +5,14 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(express.static("public"));
-app.get("/api", (req, res) => {
+app.get("/api/user/", (req, res) => {
   res.send("welcome user");
+  req.send(req.body);
 });
 app.post("/api/user", (req, res) => {
   const { name, email } = req.body;
   res.json({
-    message: `User name ${name} and email ${email} created successfuly`,
+    message: `User name ${name} and email ${email} created successfully`,
   });
 });
 app.put("/api/user/:id", (req, res) => {
@@ -19,6 +20,12 @@ app.put("/api/user/:id", (req, res) => {
   const { name, email } = req.body;
   res.json({
     message: `User ${userId} updated to ${name}, ${email}`,
+  });
+});
+app.delete("/api/user/:id", (req, res) => {
+  const userId = req.params.id;
+  res.json({
+    message: `User ${userId} deleted successfully`,
   });
 });
 
