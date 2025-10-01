@@ -14,5 +14,12 @@ app.post("/api/user", (req, res) => {
     message: `User name ${name} and email ${email} created successfuly`,
   });
 });
+app.put("/api/user/:id", (req, res) => {
+  const userId = req.params.id;
+  const { name, email } = req.body;
+  res.json({
+    message: `User ${userId} updated to ${name}, ${email}`,
+  });
+});
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
