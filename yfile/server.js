@@ -31,12 +31,3 @@ app.delete("/api/user/:id", (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
-
-app.put("/api/users/:id", (req, res) => {
-  const id = req.params.id;
-  const { name, age } = req.req.body;
-  res.json({
-    id,
-    name,
-  });
-});
