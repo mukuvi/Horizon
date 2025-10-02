@@ -5,10 +5,11 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(express.static("public"));
-app.get("/api/user/", (req, res) => {
+
+app.get("/api/", (req, res) => {
   res.send("welcome user");
-  req.send(req.body);
 });
+
 app.post("/api/user", (req, res) => {
   const { name, email } = req.body;
   res.json({
@@ -30,3 +31,12 @@ app.delete("/api/user/:id", (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+
+app.put("/api/users/:id", (req, res) => {
+  const id = req.params.id;
+  const { name, age } = req.req.body;
+  res.json({
+    id,
+    name,
+  });
+});
