@@ -9,4 +9,4 @@ export const connectDb = async (DATABASE_URL) => {
   }
 };
 
-const DATABASE_URL = process.env.
+const DATABASE_URL = process.
