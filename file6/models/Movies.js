@@ -17,8 +17,7 @@ const moviesSchema = new mongoose.Schema({
 
 //model
 const movieModel = mongoose.model("Movie", moviesSchema);
-export default movieModel;
-
+//create new doc
 const createDoc = async () => {
   try {
     const m1 = new movieModel({
@@ -34,3 +33,4 @@ const createDoc = async () => {
     console.log(error);
   }
 };
+export default movieModel;
