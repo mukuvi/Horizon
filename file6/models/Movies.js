@@ -18,3 +18,18 @@ const moviesSchema = new mongoose.Schema({
 //model
 const movieModel = mongoose.model("Movie", moviesSchema);
 export default movieModel;
+
+const createDoc = async () => {
+  try {
+    new movieModel({
+      name: "Extraction 2",
+      ratings: 4,
+      money: 6000,
+      genre: ["action", "adventure"],
+      isActive: true,
+      comments: [{ value: "That was an amazing movie" }],
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};

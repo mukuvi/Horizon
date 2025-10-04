@@ -1,5 +1,6 @@
 import express from "express";
 import connectDB from "./db/connectDB.js";
+import movieModel from "./models/Movies.js";
 const app = express();
 const PORT = process.env.PORT || 8000;
 const DATABASE_URL =
