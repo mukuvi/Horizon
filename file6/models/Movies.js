@@ -21,7 +21,7 @@ export default movieModel;
 
 const createDoc = async () => {
   try {
-    new movieModel({
+    const m1 = new movieModel({
       name: "Extraction 2",
       ratings: 4,
       money: 6000,
