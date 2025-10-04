@@ -8,5 +8,3 @@ export const connectDb = async (DATABASE_URL) => {
     console.log(error);
   }
 };
-
-const 
