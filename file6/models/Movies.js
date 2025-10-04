@@ -29,6 +29,7 @@ const createDoc = async () => {
       isActive: true,
       comments: [{ value: "That was an amazing movie" }],
     });
+    const result = await m1.save();
   } catch (error) {
     console.log(error);
   }
