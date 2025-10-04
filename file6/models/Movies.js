@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+//schema
 const moviesSchema = new mongoose.Schema({
   name: { type: String, required: true, trim: true },
   ratings: { type: Number, required: true, min: 1, max: 5 },
@@ -14,4 +14,7 @@ const moviesSchema = new mongoose.Schema({
     { value: { type: String }, published: { type: Date, default: Date.now } },
   ],
 });
-export default moviesSchema;
+
+//model
+const movieModel = mongoose.model("Movie", moviesSchema);
+export default movieModel;
