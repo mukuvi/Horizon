@@ -14,3 +14,4 @@ const moviesSchema = new mongoose.Schema({
     { value: { type: String }, published: { type: Date, default: Date.now } },
   ],
 });
+export default moviesSchema;
